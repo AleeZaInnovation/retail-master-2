@@ -113,7 +113,7 @@ const IncomeStatement = () => {
                       </td>
                     ) : (
                       <td className="text-right dark:text-gray-300">
-                        +{(-1 * totalPurchase).toLocaleString("en").toFixed(2)}
+                        +{(-1 * totalPurchase).toLocaleString("en")}
                       </td>
                     )}
                   </tr>
@@ -127,9 +127,7 @@ const IncomeStatement = () => {
                     </td>
                     <td className="text-right dark:text-gray-300 "></td>
                     <td className="text-right dark:text-gray-300 text-xl font-bold mb-1">
-                      {(totalSales - totalPurchase)
-                        .toLocaleString("en")
-                        .toFixed(2)}
+                      {(totalSales - totalPurchase).toLocaleString("en")}
                     </td>
                   </tr>
                   {incomeParty?.length > 0 ? (
