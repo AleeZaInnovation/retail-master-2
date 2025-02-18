@@ -95,7 +95,7 @@ const IncomeStatement = () => {
                     </td>
                     <td className="text-right dark:text-gray-300"></td>
                     <td className="text-right dark:text-gray-300">
-                      {totalSales.toLocaleString("en").toFixed(2)}
+                      {totalSales.toFixed(2)}
                     </td>
                   </tr>
                   <tr>
@@ -109,11 +109,11 @@ const IncomeStatement = () => {
                     <td className="text-right dark:text-gray-300"></td>
                     {totalPurchase > 0 ? (
                       <td className="text-right dark:text-gray-300">
-                        -{totalPurchase.toLocaleString("en").toFixed(2)}
+                        -{totalPurchase.toFixed(2)}
                       </td>
                     ) : (
                       <td className="text-right dark:text-gray-300">
-                        +{(-1 * totalPurchase).toLocaleString("en")}
+                        +{(-1 * totalPurchase).toFixed(2)}
                       </td>
                     )}
                   </tr>
@@ -127,7 +127,7 @@ const IncomeStatement = () => {
                     </td>
                     <td className="text-right dark:text-gray-300 "></td>
                     <td className="text-right dark:text-gray-300 text-xl font-bold mb-1">
-                      {(totalSales - totalPurchase).toLocaleString("en")}
+                      {(totalSales - totalPurchase).toFixed(2)}
                     </td>
                   </tr>
                   {incomeParty?.length > 0 ? (
@@ -156,7 +156,7 @@ const IncomeStatement = () => {
                             </div>
                           </td>
                           <td className="text-right dark:text-gray-300">
-                            {i.amount.toLocaleString("en")}
+                            {i.amount.toFixed(2)}
                           </td>
                           <td className="text-right dark:text-gray-300"></td>
                         </tr>
@@ -173,7 +173,7 @@ const IncomeStatement = () => {
                       </td>
                       <td className="text-right dark:text-gray-300"></td>
                       <td className="text-right dark:text-gray-300 text-xl font-bold">
-                        +{totalIncome.toLocaleString("en")}
+                        +{totalIncome.toFixed(2)}
                       </td>
                     </tr>
                   ) : (
@@ -205,7 +205,7 @@ const IncomeStatement = () => {
                             </div>
                           </td>
                           <td className="text-right dark:text-gray-300">
-                            {i.amount.toLocaleString("en")}
+                            {i.amount.toFixed(2)}
                           </td>
                           <td className="text-right dark:text-gray-300"></td>
                         </tr>
@@ -221,7 +221,7 @@ const IncomeStatement = () => {
                         </div>
                       </td>
                       <td className="text-right dark:text-gray-300">
-                        {totalDiscount.toLocaleString("en")}
+                        {totalDiscount.toFixed(2)}
                       </td>
                       <td className="text-right dark:text-gray-300"></td>
                     </tr>
@@ -239,7 +239,7 @@ const IncomeStatement = () => {
                       </td>
                       <td className="text-right dark:text-gray-300"></td>
                       <td className="text-right dark:text-gray-300 text-xl font-bold">
-                        -{(totalExpense + totalDiscount).toLocaleString("en")}
+                        -{(totalExpense + totalDiscount).toFixed(2)}
                       </td>
                     </tr>
                   ) : (
@@ -270,7 +270,7 @@ const IncomeStatement = () => {
                         totalIncome -
                         totalExpense -
                         totalDiscount
-                      ).toLocaleString("en")}
+                      ).toFixed(2)}
                     </td>
                   </tr>
                 </tbody>
