@@ -19,8 +19,8 @@ module.exports.get_seller_dashboard_data = async (req, res) => {
     var { companyId } = await ownerModel.findById(id);
   }
   var date = new Date();
-  var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-  var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+  var firstDay = new Date(date.getFullYear(), date.getMonth(), 2);
+  var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 1);
 
   const startDate = moment(firstDay).format();
   const endDate = moment(lastDay).format();
