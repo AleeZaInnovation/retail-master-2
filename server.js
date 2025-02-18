@@ -38,7 +38,7 @@ exports.handler = async (event, context) => {
 
 app.use(
   cors({
-    origin: ["https://retailmasterv2.vercel.app"],
+    origin: ["https://retail-master-2.vercel.app"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
