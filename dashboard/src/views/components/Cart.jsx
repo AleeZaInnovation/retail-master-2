@@ -9,7 +9,6 @@ const Cart = (props) => {
     dispatch(cartActions.deleteItem(id));
   };
 
-
   return (
     <div className="w-full bg-white flex flex-wrap">
       <div className="flex justify-between  sm:w-full sm:mt-3">
@@ -32,7 +31,9 @@ const Cart = (props) => {
         <div className="flex gap-2 mt-10 lg:mt-0 sm:mt-0 flex-col">
           <div className="flex bg-slate-200 h-[30px] justify-center items-center text-xl">
             <div className="px-3">{quantity * price}</div> ||
-            <div className="px-3">{(quantity * price) - (quantity * pp)}</div>
+            <div className="px-3">
+              {(quantity * price - quantity * pp).toFixed(2)}
+            </div>
           </div>
           <button
             onClick={(e) => deleteItem(id)}

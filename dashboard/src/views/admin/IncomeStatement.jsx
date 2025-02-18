@@ -95,7 +95,7 @@ const IncomeStatement = () => {
                     </td>
                     <td className="text-right dark:text-gray-300"></td>
                     <td className="text-right dark:text-gray-300">
-                      {totalSales.toLocaleString("en")}
+                      {totalSales.toLocaleString("en").toFixed(2)}
                     </td>
                   </tr>
                   <tr>
@@ -109,11 +109,11 @@ const IncomeStatement = () => {
                     <td className="text-right dark:text-gray-300"></td>
                     {totalPurchase > 0 ? (
                       <td className="text-right dark:text-gray-300">
-                        -{totalPurchase.toLocaleString("en")}
+                        -{totalPurchase.toLocaleString("en").toFixed(2)}
                       </td>
                     ) : (
                       <td className="text-right dark:text-gray-300">
-                        +{(-1 * totalPurchase).toLocaleString("en")}
+                        +{(-1 * totalPurchase).toLocaleString("en").toFixed(2)}
                       </td>
                     )}
                   </tr>
@@ -127,7 +127,9 @@ const IncomeStatement = () => {
                     </td>
                     <td className="text-right dark:text-gray-300 "></td>
                     <td className="text-right dark:text-gray-300 text-xl font-bold mb-1">
-                      {(totalSales - totalPurchase).toLocaleString("en")}
+                      {(totalSales - totalPurchase)
+                        .toLocaleString("en")
+                        .toFixed(2)}
                     </td>
                   </tr>
                   {incomeParty?.length > 0 ? (
