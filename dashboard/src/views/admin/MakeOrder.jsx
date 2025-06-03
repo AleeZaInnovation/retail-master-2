@@ -388,8 +388,9 @@ const MakeOrder = () => {
                 required
               />
               <div
-                className={`absolute top-[101%] bg-slate-800 w-full transition-all ${partyShow ? "scale-100" : "scale-0"
-                  }`}
+                className={`absolute top-[101%] bg-slate-800 w-full transition-all ${
+                  partyShow ? "scale-100" : "scale-0"
+                }`}
               >
                 <div className="w-full px-4 py-2 fixed">
                   <input
@@ -405,8 +406,9 @@ const MakeOrder = () => {
                 <div className="flex justify-start text-[#f8f8f9] items-start flex-col h-[200px] overflow-x-scroll">
                   {allParty.map((c, i) => (
                     <span
-                      className={`px-4 py-2 hover:bg-indigo-500 hover:text-white hover:shadow-lg w-full cursor-pointer ${party === c.name && "bg-indigo-500"
-                        }`}
+                      className={`px-4 py-2 hover:bg-indigo-500 hover:text-white hover:shadow-lg w-full cursor-pointer ${
+                        party === c.name && "bg-indigo-500"
+                      }`}
                       onClick={() => {
                         setPartyShow(false);
                         setParty(c._id);
@@ -424,9 +426,7 @@ const MakeOrder = () => {
           </div>
         </section>
         <section className="bg-[rgb(40,48,70)]">
-          <div className="my-4 mb-2">
-            <Categories />
-          </div>
+          <div className="my-4 mb-2">{/* <Categories /> */}</div>
           <div id="all_products" className="w-[85%] lg:w-[90%] mx-auto py-16">
             <p className="py-3 mb-3 text-white">Total Items {totalProduct}</p>
             <section className="w-full p-4  bg-[#eeeeee] rounded-md">
@@ -445,8 +445,9 @@ const MakeOrder = () => {
                       id="product"
                     />
                     <div
-                      className={`absolute top-[101%] bg-slate-800 w-full transition-all ${invShow ? "scale-100" : "scale-0"
-                        }`}
+                      className={`absolute top-[101%] bg-slate-800 w-full transition-all ${
+                        invShow ? "scale-100" : "scale-0"
+                      }`}
                     >
                       <div className="w-full px-4 py-2 fixed">
                         <input
@@ -461,8 +462,9 @@ const MakeOrder = () => {
                       <div className="flex justify-start items-start flex-col h-[200px] overflow-x-scroll">
                         {allInventory.map((c, i) => (
                           <span
-                            className={`px-4 py-2 text-[#d0d2d6] hover:bg-indigo-500 hover:text-white hover:shadow-lg w-full cursor-pointer ${product === c.name && "bg-indigo-500"
-                              }`}
+                            className={`px-4 py-2 text-[#d0d2d6] hover:bg-indigo-500 hover:text-white hover:shadow-lg w-full cursor-pointer ${
+                              product === c.name && "bg-indigo-500"
+                            }`}
                             onClick={() => {
                               setInvShow(false);
                               setInventory(c.name);
@@ -563,8 +565,9 @@ const MakeOrder = () => {
                         name="branch"
                       />
                       <div
-                        className={`absolute top-[101%] bg-slate-800 w-[210px] transition-all ${branchShow ? "scale-100" : "scale-0"
-                          }`}
+                        className={`absolute top-[101%] bg-slate-800 w-[210px] transition-all ${
+                          branchShow ? "scale-100" : "scale-0"
+                        }`}
                       >
                         <div className="w-full px-4 py-2 fixed">
                           <input
@@ -579,8 +582,9 @@ const MakeOrder = () => {
                         <div className="flex justify-start items-start flex-col h-[200px] overflow-x-scroll">
                           {allBranch.map((c, i) => (
                             <span
-                              className={`px-4 py-2 text-[#d0d2d6] hover:bg-indigo-500 hover:text-white hover:shadow-lg w-full cursor-pointer ${product === c.name && "bg-indigo-500"
-                                }`}
+                              className={`px-4 py-2 text-[#d0d2d6] hover:bg-indigo-500 hover:text-white hover:shadow-lg w-full cursor-pointer ${
+                                product === c.name && "bg-indigo-500"
+                              }`}
                               onClick={() => {
                                 setBranchShow(false);
                                 setBranch(c._id);
@@ -714,7 +718,6 @@ const MakeOrder = () => {
             </div>
           </div>
         </section>
-
       </div>
       <>
         {showModal && (
